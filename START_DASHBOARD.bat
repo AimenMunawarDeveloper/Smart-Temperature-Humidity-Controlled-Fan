@@ -6,3 +6,4 @@ echo.
 cd dashboard
 npm run dev
 pause
+
