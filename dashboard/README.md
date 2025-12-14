@@ -33,7 +33,7 @@ Update the following variables in the Arduino sketch (`.ino` file`) to match you
 | `server`  | `"172.25.211.20"`         | Local IP address of the machine hosting your dashboard |
 | `port`    | `3000`                     | Network port the dashboard server listens on          |
 
----
+
 
 ### 2. Motor Pins
 The **L298N Motor Driver** is connected to the ESP32 using the following GPIO pins:
@@ -45,10 +45,10 @@ The **L298N Motor Driver** is connected to the ESP32 using the following GPIO pi
 | `MOTOR_PIN_IN2`  | 27         | Controls motor direction (Set LOW for clockwise) | Output (Digital) |
 | `DHTPIN`         | 18         | Data pin for the DHT11 Temperature/Humidity Sensor | Input        |
 
----
+
 
 ### 3. Fan Speed Thresholds
-The fan speed is determined by comparing sensor readings to these thresholds. The final speed level is calculated by averaging the levels from **both Temperature and Humidity**.
+The fan speed is determined by comparing sensor readings to these thresholds. The final speed level is calculated by averaging the speed from **both Temperature and Humidity**.
 
 | Sensor      | Speed Level | Threshold 1 (LOW/MID) | Threshold 2 (MID/MAX) |
 |------------|-------------|----------------------|-----------------------|
@@ -65,7 +65,6 @@ The fan speed is determined by comparing sensor readings to these thresholds. Th
 - Medium speed: 25°C < Temp < 27°C → Speed MID  
 - High speed: Temp ≥ 27°C → Speed MAX  
 
----
 
 ### 4. Motor Duty Cycles (PWM Power)
 The fan's physical speed is set by these fixed PWM duty cycle values (out of 255 maximum):
